@@ -90,7 +90,7 @@ function add_organisations(){
         $entreprise->setIdUtilisateur($_SESSION['user_connected']['id']);
         $entreprise->add_entreprise($entreprise);
         $_SESSION['all'] = $entreprise->all_entreprises();
-        header('location:liste');
+        header('location:../entreprises/liste');
 }
 
 /**
