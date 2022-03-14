@@ -1,0 +1,25 @@
+RewriteEngine On
+#Home pages
+RewriteRule ^accueil$ index.php
+RewriteRule ^connexion$ src/views/connexion.php
+
+#Users Routes
+RewriteRule ^utilisateurs/connexion$ src/controllers/utilisateurController.php?get_connexion
+RewriteRule ^utilisateurs/entrepriseController$ src/controllers/entrepriseContoller.php?liste
+RewriteRule ^utilisateurs/add_organisation$ src/controllers/entrepriseContoller.php?form
+RewriteRule ^utilisateurs/logout$ src/controllers/entrepriseContoller.php?logout
+
+#Entreprises Routes
+RewriteRule ^entreprises/add$ src/controllers/entrepriseContoller.php
+RewriteRule ^entreprises/update$ src/controllers/entrepriseContoller.php
+RewriteRule ^entreprises/update/([0-9]+)$ src/controllers/entrepriseContoller.php?update=$1
+RewriteRule ^entreprises/delete/([0-9]+)$ src/controllers/entrepriseContoller.php?delete=$1
+RewriteRule ^entreprises/update_form$ src/views/entreprises/update.php
+RewriteRule ^entreprises/liste$ src/views/entreprises/liste.php
+RewriteRule ^entreprises/ajout$ src/views/entreprises/ajout.php?ajout
+
+#Utils Routes
+RewriteRule ^style$ src/public/style.css
+RewriteRule ^script$ src/views/templates/script.js
+RewriteRule ^header$ src/views/templates/header.css
+RewriteRule ^logo$ src/public/logo.jpg
