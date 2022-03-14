@@ -1,0 +1,17 @@
+{
+    "name": "emma/brief_mvc",
+    "description": "gestion des organisations",
+    "autoload": {
+        "psr-4": {
+            "Brief\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "emmageo3",
+            "email": "kanfanyemma22@gmail.com"
+        }
+    ],
+    "require-dev": {
+    }
+}
